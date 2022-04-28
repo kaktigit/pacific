@@ -1,0 +1,6 @@
+Purpose of Prototype
+====================
+
+1 - Approval from client
+2 - Attach Prototype/Screenshots with Project Contract
+3 - Approved Prototype handover to Development Team

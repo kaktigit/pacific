@@ -1,0 +1,170 @@
+/* 
+
+    Selectors: Uss cheez ko select kerna jiss per makeup apply kerna ho
+               cheez simple tareeqay say bhee select ho jati hai
+               aur complex tareeqay say bhee
+*/
+
+/* Global Selector */
+* {
+}
+
+/* Element Selector */
+html {
+  /* 
+    Default Font Size is 16px of most of the browsers
+    1rem = Default Browser Font Size    
+    */
+  /*
+    Here we changed the default font size for this website
+    Now 62.5% of 16px is 10px
+    Now it means 1rem for this website is 10px
+    We can use 1rem like this 1rem x 6 = 60px
+    */
+  font-size: 62.5%;
+
+  /*
+    Default content-box - Add padding and border in width and height - Kanjoos (main nay nahi daini jagah)
+    border-box - consume width and height for padding and border - Sakhi (mujh say jagah share ker lo)
+    */
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  /* vh is viewport height 100vh = 100% of the viewport height */
+  height: 100vh;  
+  /* Typography Decisions */
+  /* in this case it will become 16px */
+  font-size: 1.6rem;  
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100vh;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+  'header'
+  'main'
+  'footer';
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;
+}
+
+header {
+  grid-area: header;
+  background-color: #d62e9e;
+}
+
+main {
+  grid-area: main;
+  background-color: rgb(211, 211, 211);
+  padding: 1rem;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #d62e9e;
+  color: #ffffff;
+}
+
+/* Simple Selectors Element Name, Id, Class */
+/* Combinators 
+    There are four different combinators in CSS:
+
+    descendant selector (space)
+    child selector (>)
+    adjacent sibling selector (+)
+    general sibling selector (~)
+*/
+
+/* Common Classes */
+
+h1 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+
+h2 {
+  font-size: 1.6rem;
+  padding: 1rem 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff8000;
+}
+
+
+/******* SECTIONS *******/
+/*======================*/
+
+/* Header */
+
+header a {
+  color: #ffffff;
+  padding: 1rem;
+}
+
+a.brand {
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row.center {
+  justify-content: center;
+}
+
+/* Image */
+img {
+  border-radius: 0.5rem;
+}
+
+img.medium {
+  max-width: 29rem;
+  width: 100%;
+}
+
+/* Card */
+.card {
+  border: 0.1rem #c0c0c0 solid;
+  background-color: #f8f8f8;
+  border-radius: 0.5rem;
+  margin: 1rem;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-body > * {
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-size: 2rem;
+}
+
+/* Rating */
+.rating span {
+  color: #f0c040;
+  margin: 0.1rem;
+}
